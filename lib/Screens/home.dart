@@ -1,3 +1,4 @@
+import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/adapters.dart';
@@ -208,8 +209,7 @@ class _HomeState extends State<Home> {
                   child: Row(
                     children: [
                       Text(
-                        //'\Rp ${total()}',
-                        NumberFormat.currency(locale: 'total').format(amount),
+                        NumberFormat.currency(locale: 'id', symbol: 'Rp ', decimalDigits: 0).format(total),
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 25,
@@ -279,7 +279,7 @@ class _HomeState extends State<Home> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        '\Rp ${income()}',
+                        NumberFormat.currency(locale: 'id', symbol: 'Rp ', decimalDigits: 0).format(income()),
                         style: TextStyle(
                           fontWeight: FontWeight.w600,
                           fontSize: 17,
@@ -287,7 +287,7 @@ class _HomeState extends State<Home> {
                         ),
                       ),
                       Text(
-                        '\Rp ${expenses()}',
+                        NumberFormat.currency(locale: 'id', symbol: 'Rp ', decimalDigits: 0).format(expenses()),
                         style: TextStyle(
                           fontWeight: FontWeight.w600,
                           fontSize: 17,
