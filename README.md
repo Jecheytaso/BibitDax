@@ -3,7 +3,7 @@
 A new Flutter project.
 
 ## Getting Started
-Nama APK : Bidax 
+Nama APK : BibitDax 
 
 List anggota kelompok : 
 1. Nanda Goaw Putra 535220069 (Miruzen)
